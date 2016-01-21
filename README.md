@@ -268,6 +268,7 @@ They need to use minimum number of rats (as PETA are always running after them) 
 
 Can you find out a methodology to use minimum number of rats to find out the defective?
 Hint: the answer is less than 10.
+ans=7
 
 
 
