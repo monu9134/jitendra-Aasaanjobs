@@ -67,3 +67,18 @@ int checkabsoluteZero(int a[], int n)
     }
 }
 then check each pair
+int sum-pair(int a[], int n)
+{ 
+for(i=0;i<n-1;i++) 
+{ 
+for(j=0;j<n-1;j++)
+{ 
+ifsum<a[j]+a[i])
+return sum;
+
+} 
+}
+}
+
+
+
