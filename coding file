@@ -6,15 +6,64 @@ Can you write a pseudocode, which can help Sheeba to find out the number which g
                                                   solution
 //using heapsort technique
 
-int twiceNumber(int a[],int n) { Apply heapsort on array (this will reduce time complexity to O(nlogn) otherwise using brute-force technique complexity is o(n^2)) heapsort(a,i,n);
+int twiceNumber(int a[],int n) 
+{ Apply heapsort on array (this will reduce time complexity to O(nlogn) otherwise using brute-force technique complexity is o(n^2)) 
+heapsort(a,i,n);
 
-for(i=0;i<n-1;i++) { if(a[i]==a[i+1]) printf("number that is repeated = %d",a[i]); // print the number break; } heap sort void heapsort(int arr, int i, int size) { int tmp,j; tmp=arr[i]; j=i2; while(j<=size) { if((j<size)&&(arr[j]<arr[j+1])) j++; if(arr[j]<arr[j/2]) break; arr[j/2]=arr[j]; j=j*2; } arr[j/2]=tmp; }
+for(i=0;i<n-1;i++) 
+{ if(a[i]==a[i+1]) printf("number that is repeated = %d",a[i]); // print the number break; 
+} 
+
+heap sort void heapsort(int arr, int i, int size) 
+{ 
+int tmp,j; tmp=arr[i];
+j=i2;
+while(j<=size) 
+{ 
+if((j<size)&&(arr[j]<arr[j+1]))
+j++; 
+if(arr[j]<arr[j/2])
+break; 
+arr[j/2]=arr[j]; 
+j=j*2; 
+} 
+arr[j/2]=tmp;
+}
 
                                     using brute-force tecnique
-int twiceNumber(int a[], int n) { for(i=0;i<n-1;i++) { for(j=0;j<n-1;j++) { if(a[j]==a[i]) printf("number that is repeated = %d",a[i]); // print the number breaik; } } }
+int twiceNumber(int a[], int n)
+{ 
+for(i=0;i<n-1;i++) 
+{ 
+for(j=0;j<n-1;j++)
+{ 
+if(a[j]==a[i])
+printf("number that is repeated = %d",a[i]); // print the number breaik; 
+} 
+}
+}
 
-3) Closest to zero 20 Marks
-
-This problem is also called minimum absolute sum pair. You are given an array of integers, containing both +ve and -ve numbers. You need to find the two elements such that their sum is closest to zero. eg. Array [15, 5, -20, 30, -45] Output should be 15, -20.
-
-                                                solution
+This problem is also called minimum absolute sum pair.
+You are given an array of integers, containing both +ve and -ve numbers. 
+You need to find the two elements such that their sum is closest to zero. eg. Array [15, 5, -20, 30, -45] Output should be 15, -20.
+                          solution\
+                          
+int checkabsoluteZero(int a[], int n)
+{
+    // sort the array
+    int i;min;
+    min=a[0];
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+          {
+            if(a[i]<a[j])
+            min=i;
+          }
+          //swap the element
+          temp=a[i];
+          a[i]=a[j];
+          a[j]=temp;
+    }
+}
+then check each pair
