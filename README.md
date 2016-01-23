@@ -65,9 +65,9 @@ d. 50.00
 3) A clock is started at noon. By 20 minutes past 5, the hour hand has turned 
 through
 
-a. 160°
+a. 160°***		ans=160
 b. 145°
-c. 130°***      ans=130
+c. 130°
 d. 152°
 
 
